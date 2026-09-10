@@ -1,0 +1,18 @@
+@model List<Expirement_6.Models.Product>
+
+<html>
+    <head>
+        <title>Product Catalog</title>
+    </head>
+    <body>
+        <h1>Product Catalog</h1>
+        @foreach (var data in Model)
+        {
+            <img src="@data.PImageUrl" width="128" height="128" /><br />
+            <h3>Name: @data.PName</h3>
+            <h4>Category: @data.PCategory</h4>
+            <b>Price: @data.PPrice</b><br />
+            <hr />
+        }
+    </body>
+</html>
