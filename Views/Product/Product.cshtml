@@ -1,18 +1,28 @@
-@model List<Expirement_6.Models.Product>
+@model List<Lab_6.Models.Product>
 
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Product Catalog</title>
-    </head>
-    <body>
-        <h1>Product Catalog</h1>
+<head>
+    <title>Product Catalog</title>
+</head>
+<body>
+    <h1>Product Catalog</h1>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+            <th>Url</th>
+        </tr>
         @foreach (var data in Model)
         {
-            <img src="@data.PImageUrl" width="128" height="128" /><br />
-            <h3>Name: @data.PName</h3>
-            <h4>Category: @data.PCategory</h4>
-            <b>Price: @data.PPrice</b><br />
-            <hr />
+            <tr>
+                <td>@data.PName</td>
+                <td>@data.PId</td>
+                <td>
+                    <a href="@Url.Action("Details", "Product", new { id = data.PId })">View Details</a>
+                </td>
+            </tr>
         }
-    </body>
+    </table>
+</body>
 </html>

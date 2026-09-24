@@ -1,0 +1,21 @@
+@model Lab_6.Models.Product
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Product Details</title>
+</head>
+<body>
+    <div>
+        <img src="@Model.PImageUrl" width="200" height="200" /><br />
+        <h3>Name: @Model.PName</h3>
+        <h4>Category: @Model.PCategory</h4>
+        <b>Price: @Model.PPrice</b><br />
+        <p>Product ID: @Model.PId</p>
+    </div>
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

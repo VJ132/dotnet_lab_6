@@ -1,4 +1,4 @@
-namespace Expirement_6.Models
+namespace Lab_6.Models
 {
     public class Product
     {
